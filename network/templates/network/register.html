@@ -1,0 +1,26 @@
+{% extends 'network/layout.html' %}
+{% block body %}
+    <div class="container">
+        <div class="login-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Aiter.jpg" alt="Aiter" style="display: block; margin: 0 auto; width: 15%; height: auto; border-radius: 10px;">            
+            <h1 style="text-align: center; margin-top: 20px;">Aite salem</h1>
+
+            <h2 style="text-align: center;">صنع كونت جديد</h2>
+
+            {% if message %}
+                <div class="alert alert-danger" style="text-align: center;">{{ message }}</div>
+            {% endif %}
+
+            <form method="post">
+                {% load static %}
+                <link rel="stylesheet" href="{% static 'network/styles.css' %}">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="كي يسموك؟" required>
+                <input type="password" name="password" placeholder="صنع موتباس" required>
+                <input type="password" name="password_confirmation" placeholder="عاود دخل الموتباس" required>
+                <h6 style="text-align: center; color: #666; margin-top: 10px;">سمحلنا...</h6>
+                <button type="submit">صنع كونت</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

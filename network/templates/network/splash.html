@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aite Salem</title>
+    <style>
+        /* إعدادات الصفحة */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff; /* لون الخلفية أسود */
+            color: rgb(15, 15, 15);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        /* إعدادات الشعار */
+        img {
+            width: 150px; /* حجم الشعار */
+            margin-bottom: 20px;
+        }
+
+        /* إعدادات النص */
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- الشعار -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Aiter.jpg" alt="شعار AITE SALEM">
+    
+    <!-- النص -->
+    <h4>from AITE SALEM</h4>
+
+    <!-- سكريبت التوجيه بعد 5 ثوانٍ -->
+    <script>
+        setTimeout(function() {
+            window.location.href = "{% url 'index' %}"; // تأكد أن 'home' هو اسم الصفحة الرئيسية
+        }, 3000); // الانتقال بعد 5 ثوانٍ
+    </script>
+</body>
+</html>

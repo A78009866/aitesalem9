@@ -1,0 +1,12 @@
+{% extends 'network/layout.html' %}
+
+{% block body %}
+<div class="container">
+    <h2>تعديل التعليق</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <textarea name="body" class="form-control" rows="3">{{ comment.body }}</textarea>
+        <button type="submit" class="btn btn-primary mt-3">حفظ التعديلات</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'network/layout.html' %}
+
+{% block body %}
+<div class="container">
+    <h2>تحديث الصورة الشخصية</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">حفظ التعديلات</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'network/layout.html' %}
+
+{% block body %}
+<div class="container">
+    <h2>الملف الشخصي</h2>
+    
+    <!-- عرض الصورة الشخصية -->
+    <img src="{{ user.profile_picture.url }}" alt="الصورة الشخصية" class="img-thumbnail" width="150">
+    
+    <p><strong>الاسم:</strong> {{ user.username }}</p>
+    <p><strong>البريد الإلكتروني:</strong> {{ user.email }}</p>
+
+    <a href="{% url 'update_profile' %}" class="btn btn-primary">تحديث الصورة الشخصية</a>
+    <a href="{% url 'change_password' %}" class="btn btn-warning">تغيير كلمة المرور</a>
+</div>
+{% endblock %}
