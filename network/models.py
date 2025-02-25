@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 class User(AbstractUser):
     friends = models.ManyToManyField('self', symmetrical=True, blank=True)
@@ -60,3 +61,9 @@ class Message(models.Model):
     body = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     is_read = models.BooleanField(default=False)
+
+   
+
+class Post(models.Model):
+    body = models.TextField()
+    image = CloudinaryField('image', blank=True, null=True)

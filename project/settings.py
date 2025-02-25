@@ -18,6 +18,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'channels',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -115,3 +117,13 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'duixjs8az',
+    'API_KEY': '855567725718793',
+    'API_SECRET': 'ENvvZcFPyEqpQdt3iSqsO5r51LQ',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
