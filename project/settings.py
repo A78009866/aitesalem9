@@ -57,10 +57,10 @@ ASGI_APPLICATION = 'project.asgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'aite',
-        'USER': 'aite_user',
-        'PASSWORD': '6w6kKe4NyCLWYhUfU3LbjDRWParJ8FBq',
-        'HOST': 'dpg-cuoc348gph6c73dl3j20-a',  # أو عنوان السيرفر إذا كنت تستخدم PostgreSQL عن بعد
+        'NAME': 'aite_678v',
+        'USER': 'aite',
+        'PASSWORD': 'SHXDLnhKXk0zZK60ayI5c894izVk5qei',
+        'HOST': 'dpg-cv0buqlds78s73edpdn0-a',  # أو عنوان السيرفر إذا كنت تستخدم PostgreSQL عن بعد
         'PORT': '5432',  # المنفذ الافتراضي لـ PostgreSQL
         'OPTIONS': {
             'client_encoding': 'UTF8',
