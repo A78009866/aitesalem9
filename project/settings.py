@@ -60,14 +60,10 @@ DATABASES = {
         'NAME': 'aite_678v',
         'USER': 'aite',
         'PASSWORD': 'SHXDLnhKXk0zZK60ayI5c894izVk5qei',
-        'HOST': 'dpg-cv0buqlds78s73edpdn0-a',  # أو عنوان السيرفر إذا كنت تستخدم PostgreSQL عن بعد
-        'PORT': '5432',  # المنفذ الافتراضي لـ PostgreSQL
-        'OPTIONS': {
-            'client_encoding': 'UTF8',
-        }
+        'HOST': 'dpg-cv0buqlds78s73edpdn0-a',
+        'PORT': '5432',
     }
 }
-
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
